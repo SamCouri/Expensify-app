@@ -6,7 +6,7 @@
   "engines": {
     "node": "16.13.1"
   },
-  "scripts": {
+ "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
