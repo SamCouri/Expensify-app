@@ -24,16 +24,16 @@ module : {
     use: CSSExtract.extract({
       use: [
         {
-          loader: 'css-loader',
+        loader: 'css-loader',
           options: {
             sourceMap: true
-          } 
+          }
         },
         {
         loader: 'sass-loader',
-        options : {
-          sourceMap : true
-        }
+          options: {
+            sourceMap: true
+          }
         }
       ]
     })

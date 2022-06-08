@@ -6,17 +6,17 @@
   "engines": {
     "node": "16.13.1"
   },
- "scripts": {
+  "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack",
     "build:prod": "webpack -p --env production",
-    "dev-server": "webpack-dev-server",
+    "dev-server": "webpack serve",
     "test": "jest --config=jest.config.json",
     "start": "node server/server.js",
-    "heroku-postbuild" : "yarn run build:prod"
+    "heroku-postbuild": "yarn run build:prod"
   },
-
   "dependencies": {
+    "async": "2.5.0",
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-loader": "7.1.1",
@@ -34,8 +34,8 @@
     "jest": "20.0.4",
     "live-server": "^1.2.1",
     "moment": "2.18.1",
+    "node": "16.13.1",
     "node-sass": "6.0",
-    "node":"16.13.1", 
     "normalize.css": "7.0.0",
     "raf": "3.3.2",
     "react": "16.0.0",
@@ -51,7 +51,10 @@
     "style-loader": "0.18.2",
     "uuid": "3.1.0",
     "validator": "8.0.0",
-    "webpack": "3.1.0",
-    "webpack-dev-server": "2.5.1"
+    "webpack": "4.0.0",
+    "webpack serve": "3.5.0"
+  },
+  "devDependencies": {
+    "webpack-cli": "4.6.0"
   }
 }
