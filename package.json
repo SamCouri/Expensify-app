@@ -9,14 +9,14 @@
   "scripts": {
     "serve": "live-server public/",
     "build:dev": "webpack",
-    "build:prod": "webpack -p --env production",
-    "dev-server": "webpack serve",
+    "build:prod": "webpack --env production",
+    "dev-server": "webpack-dev-server",
     "test": "jest --config=jest.config.json",
     "start": "node server/server.js",
     "heroku-postbuild": "yarn run build:prod"
   },
   "dependencies": {
-    "async": "2.5.0",
+
     "babel-cli": "6.24.1",
     "babel-core": "6.25.0",
     "babel-loader": "7.1.1",
@@ -51,10 +51,11 @@
     "style-loader": "0.18.2",
     "uuid": "3.1.0",
     "validator": "8.0.0",
-    "webpack": "4.0.0",
-    "webpack serve": "3.5.0"
+    "webpack": "3.1.0",
+    "webpack-dev-server": "2.5.1"
   },
   "devDependencies": {
     "webpack-cli": "4.6.0"
   }
 }
+

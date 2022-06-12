@@ -17,9 +17,9 @@ const store = configureStore();
 //store.dispatch(addExpense({description: 'Gaz bill'}));
 //store.dispatch(addExpense({description: 'Rent bill', amount: 109500}));
 
-const state = store.getState();
-const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
-console.log(visibleExpenses);
+// const state = store.getState();
+// const visibleExpenses = getVisibleExpenses(state.expenses, state.filters);
+// console.log(visibleExpenses);
 
 const jsx = (
     <Provider store = {store}>
