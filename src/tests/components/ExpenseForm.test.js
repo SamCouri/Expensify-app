@@ -1,9 +1,10 @@
 import React from 'react';
-import {shallow} from 'enzyme';
+import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
-import ExpenseForm from '../../components/ExpenseForm';
 import expenses from '../fixtures/expenses';
 import moment from 'moment';
+import ExpenseForm from '../../components/ExpenseForm';
+
 
 test('should render expense form correctly', ()=> {
 const wrapper = shallow(<ExpenseForm />);

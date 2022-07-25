@@ -3,6 +3,7 @@ import {connect} from 'react-redux';
 import {DateRangePicker} from 'react-dates'; 
 import {setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate} from '../actions/filters';
 import {render} from 'enzyme'; 
+//import 'react-dates/lib/css/_datepicker.css';
 
 export class ExpenseListFilters extends React.Component {
     state= {
