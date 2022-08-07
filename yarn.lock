@@ -5003,11 +5003,6 @@ next-tick@^1.1.0:
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.1.0.tgz#1836ee30ad56d67ef281b22bd199f709449b35eb"
   integrity sha512-CXdUiJembsNjuToQvxayPZF9Vqht7hewsvy2sOWafLvi2awflj9mOC6bHIg50orX8IJvWKY9wYQ/zB2kogPslQ==
 
-node-bin-setup@^1.0.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/node-bin-setup/-/node-bin-setup-1.1.0.tgz#9df94c41335a8f41958a639b2736f860582a209c"
-  integrity sha512-pTeU6NgUrexiLNtd+AKwvg6cngHMvj5FZ5e2bbv2ogBSIc9yhkXSSaTScfSRZnwHIh5YFmYSYlemLWkiKD7rog==
-
 node-fetch@^1.0.1:
   version "1.7.3"
   resolved "https://registry.yarnpkg.com/node-fetch/-/node-fetch-1.7.3.tgz#980f6f72d85211a5347c6b2bc18c5b84c3eb47ef"
@@ -5103,13 +5098,6 @@ node-sass@6.0.0:
     sass-graph "2.2.5"
     stdout-stream "^1.4.0"
     "true-case-path" "^1.0.2"
-
-node@16.13.1:
-  version "16.13.1"
-  resolved "https://registry.yarnpkg.com/node/-/node-16.13.1.tgz#11886d0f75d904e0350a28cbbbb284d3fb84b163"
-  integrity sha512-XPcWHe8fJfB3mXZMGXxl9rSOkOhxQLjmRJBt898RCzGcZGZC0oz+1Wnc7/4hqDyQ3AZZH5xp6KizkFLIOlpHzA==
-  dependencies:
-    node-bin-setup "^1.0.0"
 
 nopt@^5.0.0:
   version "5.0.0"
