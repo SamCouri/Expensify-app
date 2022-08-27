@@ -1,9 +1,29 @@
 const path = require('path');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
+//const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = (env) => {
   const isProduction = env === 'production';
   const CSSExtract = new ExtractTextPlugin('styles.css');
+  
+  /*
+  const UglifyMinimiser = new UglifyJsPlugin(
+    {
+      uglifyOptions :
+          {
+               mangle: {
+               keep_fnames: true,
+               },
+              compress: {
+              warnings: false,
+              },
+              output: {
+              beautify: false,
+              },
+              sourceMap: true
+          },
+      });
+*/
 
   return {
   entry : './src/app.js',
@@ -39,6 +59,7 @@ module : {
 },
 plugins: [
   CSSExtract
+  //UglifyMinimiser
 ],
 
 //devtool : 'cheap-module-eval-source-map',
