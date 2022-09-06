@@ -5,6 +5,9 @@ exports[`should render header correctly 1`] = `
   <h1>
     Expensify
   </h1>
+  <h2>
+    Total expense : 
+  </h2>
   <NavLink
     activeClassName="is-active"
     exact={true}

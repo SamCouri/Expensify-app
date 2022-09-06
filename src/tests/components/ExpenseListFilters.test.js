@@ -67,13 +67,13 @@ test('should sort By Amount on input change', ()=> {
 test('should handle date changes', ()=> {
     const startDate= moment(0).add(4, 'years');  
     const endDate = moment(0).add(8, 'days');
-    wrapper.find('DateRangePicker').prop('onDatesChange')({startDate, endDate});
+    wrapper.find('withStyles(DateRangePicker)').prop('onDatesChange')({startDate, endDate});
     expect(setStartDate).toHaveBeenLastCalledWith(startDate);
     expect(setEndDate).toHaveBeenLastCalledWith(endDate);
 });
 
 test('should handle date focus changes', ()=> {
     const calendarFocused = 'endDate';
-    wrapper.find('DateRangePicker').prop('onFocusChange')(calendarFocused);
+    wrapper.find('withStyles(DateRangePicker)').prop('onFocusChange')(calendarFocused);
     expect(wrapper.state('calendarFocused')).toBe(calendarFocused);
     });

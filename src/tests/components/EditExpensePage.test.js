@@ -3,9 +3,9 @@ import { shallow } from 'enzyme';
 import {EditExpensePage} from '../../components/EditExpensePage';
 import  expenses from "../fixtures/expenses";
 import toJson from 'enzyme-to-json';
-//import ExpenseForm from '../../components/ExpenseForm';
 
 let editExpense, removeExpense, history, wrapper;
+
 beforeEach(() => {
     editExpense = jest.fn();
     removeExpense = jest.fn();
