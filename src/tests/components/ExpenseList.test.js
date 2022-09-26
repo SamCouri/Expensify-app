@@ -13,5 +13,3 @@ test('should render expense list with empty message', ()=> {
      const wrapper = shallow(<ExpenseList expenses={[]}/>);
      expect(toJson(wrapper)).toMatchSnapshot();
  });
-
- 
