@@ -4,6 +4,7 @@ import moment from 'moment';
 import numeral from 'numeral';
 
 const ExpenseListItem = ({id, description, amount, createdAt}) => (
+    //console.log('Amount inside ExpenseListItem', amount),
 <div>
     <Link 
     to={`/edit/${id}`}>

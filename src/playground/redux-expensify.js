@@ -47,7 +47,7 @@ const sortByDate = () => ({
     });
 
 //sort by amount
-const sortByAmount = () => ({
+const sortBy = () => ({
     type: 'SORT_BY_AMOUNT',
     });
 

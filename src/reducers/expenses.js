@@ -1,4 +1,3 @@
-
 //Expenses Reducers
 const expensesReducerDefaultState = [];
 
@@ -23,6 +22,10 @@ switch(action.type) {
             return expense;
         };
     });
+    case 'SET_EXPENSES':
+        //console.log("action.expense inside reducers", action.expenses);
+            return action.expenses;
+        
     default:
         return state;
     }

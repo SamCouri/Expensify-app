@@ -1,4 +1,5 @@
 import * as firebase from 'firebase';
+import moment from 'moment';
 
 const config = {
     apiKey: process.env.FIREBASE_API_KEY,
@@ -17,7 +18,6 @@ firebase.initializeApp(config);
 const database = firebase.database();
 
 export {firebase, database as default};
-
 
 // //child_removed
 // database.ref('expenses').on('child_removed', (snapshot)=> {
@@ -52,6 +52,7 @@ export {firebase, database as default};
 
 
 /*
+
 database.ref('expenses')
 .once('value')
 .then((snapshot) => {
@@ -66,34 +67,37 @@ console.log(expenses);
 });
 */
 
-
 /*
+database.ref('expenses').push({
+    description: 'Gum',
+    note: '',
+    amount: 195,
+    createdAt: moment().subtract(4, 'days').valueOf()
+});
+
 database.ref('expenses').push({
      description: "Rent",
      note: "rent for the month of August",
-     Amount: 109500,
-     createdAt: 15082023
+     amount: 109500,
+     createdAt: moment().subtract(2, 'days').valueOf()
  });
-*/
-
- /*
+ 
  database.ref('expenses').push({
     description: "Phone Bill",
     note: "Mobile expenses",
-    Amount: 3900,
-    createdAt: 15082023
+    amount: 3900,
+    createdAt: moment().add(4, 'days').valueOf()
 });
 
  database.ref('expenses').push({
     description: "Food",
     note: "Food items",
-    Amount: 1200,
-    createdAt: 15082023
+    amount: 1200,
+    createdAt: moment().add(2, 'days').valueOf()
 });
 */
 
-
-
+/*
 //database.ref('notes/-ND5IdFeUQUFH_UQI6F0').remove();
 // database.ref('notes').push(
 //     {
@@ -256,3 +260,4 @@ database.ref('expenses').push({
 // }).catch( (e)=> {
 //     console.log("adding height and weight has failed.",e);
 // });
+*/
