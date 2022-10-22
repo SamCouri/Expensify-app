@@ -147,23 +147,21 @@ test('should fetch the expenses from firebase', (done) => {
 });
 
 
- test('should update expense in firebase', (done) => {
+ test('should edit expense in firebase', (done) => {
      const store = createMockStore({});
-     const id = '1';
-     const data = {
-         description: "mouse",
-         amount: 3000,
-         note: 'this one is better',
-         createdAt: 1000
-         };
+     const id = expenses[0].id;
+     const updates = { amount: 21045};
 
-    store.dispatch(startEditExpense(id, data)).then(()=> {
+    store.dispatch(startEditExpense(id, updates)).then(()=> {
     const actions=store.getActions();
      expect(actions[0]).toEqual({
-     id : '1',
+     id,
      type : "EDIT_EXPENSE",
-     updates: data
+     updates
      });
-     done();
-     });
- });
+    return database.ref(`expenses/${id}`).once('value');
+    }).then((snapshot)=> {
+        expect(snapshot.val().amount).toEqual(updates.amount);
+        done();
+        });
+    });
