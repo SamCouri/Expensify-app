@@ -3,11 +3,8 @@ import moment from 'moment';
 // timestamp 0 = January 1st 1970 (Unix epoch)
 //Get visible expenses
 export default (expenses, {text, sortBy, startDate, endDate}) => {
-   // console.log('expenses in selectors :', expenses); 
 
     return expenses.filter( (expense) => {
-        //console.log('expense i in selectors :', expense); 
-
         const createdAtMoment = moment(expense.createdAt);
         const startDateMatch= startDate? startDate.isSameOrBefore(createdAtMoment,'day'): true;
         const endDateMatch= endDate? endDate.isSameOrAfter(createdAtMoment,'day'): true;
@@ -15,13 +12,11 @@ export default (expenses, {text, sortBy, startDate, endDate}) => {
         return startDateMatch && endDateMatch && textMatch;
         }).sort((a, b) => {
         if (sortBy === 'date'){
-            //console.log('passed by sort date');
             return a.createdAt < b.createdAt? 1 : -1;
         }
         // sort amount 
         //put higher amount first
         if (sortBy ==='amount') {
-            //console.log('passed by sort amount');
             return a.amount < b.amount? 1 : -1;
         };
         });

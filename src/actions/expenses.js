@@ -33,12 +33,32 @@ export const removeExpense = ({id} = {}) => ({
     }
 );
 
+//Remove data in the database asynchronisly
+export const startRemoveExpense = ({id} = {}) => {
+    return (dispatch) => {
+        return database.ref(`expenses/${id}`).remove().then(() => {  
+         dispatch(removeExpense({id}));
+        });
+    };
+};
+
+     
 //Edit expense
 export const editExpense = (id, updates) => ({
 type: 'EDIT_EXPENSE',
 id,
 updates
 });
+
+//Edit data in the database asynchronisly
+export const startEditExpense = (id, updates) => {
+    return ( dispatch ) => {
+        return database.ref('expenses/' + id).update(updates).then(() => {
+         dispatch(editExpense(id, updates));
+         });
+    };
+};
+
 
 //SET_EXPENSES
 export const setExpenses = (expenses) => ({
@@ -61,5 +81,3 @@ export const startSetExpenses = () => {
          });
     };
 };
-
-    

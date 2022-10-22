@@ -30,7 +30,6 @@ export {firebase, database as default};
 // });
 
 // //child_added
-
 // database.ref('expenses').on('child_added', (snapshot)=> {
 //     console.log('expense added:', snapshot.key, snapshot.val());
 // });
@@ -74,7 +73,9 @@ database.ref('expenses').push({
     amount: 195,
     createdAt: moment().subtract(4, 'days').valueOf()
 });
+*/
 
+/*
 database.ref('expenses').push({
      description: "Rent",
      note: "rent for the month of August",

@@ -17,7 +17,7 @@ exports[`should render ExpenseListFilters correctly 1`] = `
       Date
     </option>
     <option
-      value=""
+      value="amount"
     >
        Amount
     </option>
@@ -137,7 +137,7 @@ exports[`should render ExpenseListFilters with alt data correctly 1`] = `
       Date
     </option>
     <option
-      value=""
+      value="amount"
     >
        Amount
     </option>
