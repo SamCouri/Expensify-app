@@ -82,10 +82,7 @@ const actionSet = {
     type: 'SET_EXPENSES',
     expenses: [expenses[0]]
     };
-
-    //console.log('state before', expenses);
     const state = expensesReducer(expenses, actionSet);
     expect(state).toEqual(actionSet.expenses);
-    //console.log('state after', state);
 });
 
