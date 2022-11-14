@@ -35,7 +35,6 @@ ReactDOM.render(<p>Loading ... </p>, document.getElementById('app'));
 firebase.auth().onAuthStateChanged((user) => {
 if (user) {
     store.dispatch(login(user.uid));
-    //console.log("uid", user.uid);
     store.dispatch(startSetExpenses()).then( ()=> {
         renderApp(); 
         //redirect only if the user is on the login page
@@ -48,6 +47,7 @@ if (user) {
     store.dispatch(logout());
     renderApp();
     history.push('/');
+    //console.log("user is after history / ");
     }
 });
 
