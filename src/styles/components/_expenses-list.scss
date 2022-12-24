@@ -1,0 +1,34 @@
+.expenses-box {
+    border: 1px solid #cacccd;
+    background: #888;
+    padding: 0 $s-size 0 $s-size;
+    //height: $l-size;
+    //height: 12rem;
+}
+
+.expenses-item {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; //distrubute space between contents
+
+    @media(min-width: $desktop-breakpoint) {
+        flex-direction: row;
+        //padding: 0 $s-size 0 $s-size;
+      }
+}
+
+.expenses-item__description {        
+    //font-weight: bold;
+    background: none;
+    color: black;
+    //font-size: $font-size-large;
+    text-decoration: none;
+    }
+
+.expenses-item__amount {        
+    font-weight: bold;
+    }
+
+
+ 

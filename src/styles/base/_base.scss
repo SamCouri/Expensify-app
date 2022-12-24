@@ -1,10 +1,19 @@
+
+//below is the universal selector
+* {
+    box-sizing: border-box; //not content-box which adds the border and the padding to the box height
+}
+
+
 html {
     font-size : 62.5%;
 }
 
 body {
-font-family: Helvetica, Arial, sans-serif;
-font-size: $m-size;
+    color: $dark-grey; // gray colour, default is black
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: $m-size;
+    line-height: 1.6;
 }
 
 button {

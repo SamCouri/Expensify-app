@@ -1,0 +1,29 @@
+.expenses-header {
+    background: #F7F7F7;
+    padding: $s-size;
+    border: 1px solid #cacccd;
+ }
+ 
+ .expenses-header__content {
+ align-items: left;
+ display: flex;
+ flex-direction: column;
+ justify-content: space-between; //distrubute space between contents
+ //padding: $s-size, 0 ; //top and buttom
+ 
+ @media(min-width: $desktop-breakpoint) {
+    flex-direction: row;
+    //margin-bottom: $s-size;
+  }
+ }
+ 
+ .expenses-header__title {
+    font-weight: 300;
+    margin: 0;
+    span {
+        font-weight: 700; //or bold
+    }
+}
+
+
+

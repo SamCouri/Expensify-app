@@ -1,0 +1,22 @@
+.box-layout {
+    align-items: center; // to center the box, one way
+    background: url('/images/bg.jpg');
+    background-size : cover;
+    display: flex;
+    height: 100vh; //100vh: set it up to 100% of the view port height
+    justify-content : center; //to center the box, the other way
+    width: 100vw; //100vw: set it up to 100% of the view port width
+}
+
+.box-layout__box {
+    background: fade-out(white, .15);  // fade out 15%
+    border-radius: 3px; //slight boarder
+    padding: $l-size $m-size; //space between the box borders and the text top / bottom and left/right
+    text-align: center; // center the text in the box
+    width: 25rem; //fixed width
+}
+
+.box-layout__title { // this is for the title H1
+    margin: 0 0 $m-size 0; //0 top, 0 right, m size for bottom, 0 left, 
+    line-height : 1; // space between lines
+}

@@ -11,7 +11,7 @@ import './styles/styles.scss';
 import 'react-dates/lib/css/_datepicker.css';
 import {firebase} from './firebase/firebase';
 import moment from 'moment';
-
+import LoadingPage from "./components/LoadingPage";
 
 const store = configureStore();
 
@@ -30,7 +30,8 @@ if(!hasRendered){
     }
 };
 
-ReactDOM.render(<p>Loading ... </p>, document.getElementById('app')); 
+ReactDOM.render(<LoadingPage />, document.getElementById('app')); 
+
 
 firebase.auth().onAuthStateChanged((user) => {
 if (user) {
@@ -50,8 +51,6 @@ if (user) {
     //console.log("user is after history / ");
     }
 });
-
-
 
 
 
